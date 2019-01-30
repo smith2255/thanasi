@@ -17,11 +17,9 @@ def test_get_order(host, expected_value):
 def test_post_order(host, expected_value):
     url = ''.join((host, '/orders'))
 
-    request_data = {'data': 'my_Order_Data_For_The_XML_Server'}
+    payload = '{"data": "my_Order_Data_For_The_XML_Server"}'
 
-    payload = json.dumps(request_data)
-
-    response = requests.post(url, json=payload)
+    response = requests.post(url, data=payload)
 
     assert response.ok
 

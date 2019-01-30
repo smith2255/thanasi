@@ -26,11 +26,10 @@ def order_details(order_id):
 def place_order():
     remote_url = ''.join((REMOTE_HOST, request.path))
 
-    request_body = json.loads(request.get_json())
+    request_body = json.loads(request.get_data())
 
-    data_parameter = request_body.get('data', '')
-
-    xml_payload = '<order><data>{0}</data></order>'.format(data_parameter)
+    xml_payload = '<order><data>{0}</data></order>'.format(
+        request_body.get('data', ''))
 
     # Should actually re-direct to order/{id} after a successful POST
     xml_response = requests.post(remote_url, data=xml_payload)
