@@ -5,5 +5,6 @@
 2. . venv/bin/activate
 3. pip3 install -r requirements.txt
 4. ./server.py
+5. ./tests.py
 
-# Make sure to run './tests.py' to confirm it is working
+# The endpoint can be accessed at '99.229.196.35:5789'
