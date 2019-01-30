@@ -32,7 +32,7 @@ def test_post_order(host, expected_value):
 
 
 if __name__ == '__main__':
-    print('running tests!!')
+    print('Running tests......')
 
     host = 'http://0.0.0.0:5789'
 
@@ -46,3 +46,5 @@ if __name__ == '__main__':
     # The order of these requests matters, as it set the OrderId
     test_post_order(host, expected_value)
     test_get_order(host, expected_value)
+
+    print('All tests passed!')

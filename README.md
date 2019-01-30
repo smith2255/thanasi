@@ -5,3 +5,5 @@
 2. . venv/bin/activate
 3. pip3 install -r requirements.txt
 4. ./server.py
+
+# Make sure to run './tests.py' to confirm it is working
