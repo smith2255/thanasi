@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+# import ipdb
 import json
 import requests
 import xmltodict
@@ -28,8 +29,11 @@ def place_order():
 
     request_body = json.loads(request.get_data())
 
+    if 'data' not in request_body:
+        return '{"Error": "data payload not given"}'
+
     xml_payload = '<order><data>{0}</data></order>'.format(
-        request_body.get('data', ''))
+        request_body['data'])
 
     # Should actually re-direct to order/{id} after a successful POST
     xml_response = requests.post(remote_url, data=xml_payload)
@@ -47,4 +51,3 @@ if __name__ == '__main__':
         port='5789',
         debug=True,
     )
-
