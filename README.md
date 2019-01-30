@@ -8,3 +8,5 @@
 5. ./tests.py
 
 # The endpoint can be accessed at '99.229.196.35:5789'
+
+- Note: This doesn't handle much in error checking, otherwise I would have used another framework.
