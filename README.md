@@ -7,6 +7,6 @@
 4. ./server.py
 5. ./tests.py
 
-# The endpoint can be accessed at '99.229.196.35:5789'
+# The endpoint can be accessed at 'xxx.xxx.xxx.xxx'
 
 - Note: This doesn't handle much in error checking, otherwise I would have used another framework.
